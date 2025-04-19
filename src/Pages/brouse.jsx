@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "F:/project/demo/demoreact/src/components/header.jsx";
- import  BookingPage from "F:/project/demo/demoreact/src/components/bookingpage.jsx";
-//import EventPage from "F:/project/demo/demoreact/src/components/Events.jsx";
-import Footer from "F:/project/demo/demoreact/src/components/footer.jsx";
+import Header from "../components/header.jsx";
+ import  BookingPage from "../components/bookingpage.jsx";
+//import EventPage from "../components/Events.jsx";
+import Footer from "../components/footer.jsx";
 import "../components/css/brouse.css";
 
 function BrouseApp() {
