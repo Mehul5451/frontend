@@ -1,0 +1,71 @@
+/* AboutUs.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #add8e6; /* Text color for dark mode */
+  background-color: #242424;
+  }
+  
+  .about-us {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    color: #add8e6; /* Text color for dark mode */
+  background-color: #242424;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-us h1 {
+    text-align: center;
+    color: #add8e6; /* Text color for dark mode */
+    background-color: #242424;
+    margin-bottom: 1rem;
+  }
+  .mission h2 , .intro h2 ,.team h2
+  {
+    color: #65bad6; /* Text color for dark mode */
+    background-color: #242424;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  section h2 {
+    color: #add8e6; /* Text color for dark mode */
+    
+    margin-bottom: 0.5rem;
+  }
+  
+  section p {
+    line-height: 1.6;
+    margin: 0.5rem 0;
+  }
+  
+
+  .team {
+    margin-top: 20px;
+  
+  }
+  
+ 
+  .team-member {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    color: #007BFF;
+  }
+
+  
+  .team-member-name  {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+
+  }
+  
+

@@ -1,0 +1,43 @@
+/* styles.css */
+body {
+    color: #add8e6; /* Light blue text for dark mode */
+    background-color: #242424; /* Dark background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  h4, h5, h6 {
+    color: #add8e6; /* Light blue headings */
+  }
+  
+  .card {
+    background-color: #333333; /* Slightly lighter background for cards */
+    color: #add8e6; /* Light text */
+    border: 1px solid #444444; /* Subtle border for cards */
+  }
+  
+  button {
+    background-color: #444444; /* Button background */
+    color: #add8e6; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #555555; /* Darker hover state for buttons */
+  }
+  
+  .text-field, .select {
+    background-color: #333333; /* Input field background */
+    color: #add8e6; /* Input text color */
+  }
+  
+  .react-calendar {
+    background-color: #333333; /* Calendar dark background */
+    color: #add8e6; /* Calendar text color */
+    border: 1px solid #444444; /* Calendar border */
+  }
+

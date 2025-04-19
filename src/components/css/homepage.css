@@ -1,0 +1,65 @@
+.hero-section {
+  background: url("https://via.placeholder.com/1920x500?text=DJ+Banner") no-repeat center center;
+  background-size: cover;
+  padding: 100px 0;
+  color: #add8e6;
+  text-align: center;
+}
+
+  
+  .services-overview {
+    background: #f8f9fa;
+  }
+  
+  blockquote {
+    background: #f8f9fa;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    font-style: italic;
+  }
+  
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .navbar {
+    background-color: #343a40;
+  }
+  
+  .nav-link {
+    color: #fff !important;
+    margin-right: 15px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff !important;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-outline-light {
+    color: #fff;
+    border-color: #fff;
+  }
+        
+  
