@@ -25,7 +25,7 @@ export const AdminLogin = () => {
   
     try {
       // Send login request to the server
-      const response = await axios.post("http://localhost:5000/admin-login", user, {
+      const response = await axios.post("https://bakend-0ymv.onrender.com/admin-login", user, {
         headers: { "Content-Type": "application/json" },
       });
   
