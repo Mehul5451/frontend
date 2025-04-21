@@ -15,12 +15,12 @@ const ProtectedRoute = ({ children }) => {
     }
 
     // If the token exists, verify its validity by sending a request to the server
-    axios.get("/admin", {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("adminToken")}`
-      }
-    });
-    
+    axios.get("https://admin-0hmf.onrender.com/admin", {
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem("adminToken")}`
+  }
+});
+
 
   if (isAuthenticated === null) {
     return <p>Loading...</p>; // Loading state while checking authentication
