@@ -27,9 +27,7 @@ export const Login = () => {
     console.log('Sending login request with:', user); // Log user data before sending
   
     try {
-      const result = await axios.post("https://user-pel4.onrender.com/login", user, {
-        
-        withCredentials: true,
+      const result = await axios.post("https://bakend-0ymv.onrender.com/login", user, {
         headers: {
           "Content-Type": "application/json",
         },
