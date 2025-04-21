@@ -28,6 +28,8 @@ export const Login = () => {
   
     try {
       const result = await axios.post("https://user-pel4.onrender.com/login", user, {
+        
+        withCredentials: true,
         headers: {
           "Content-Type": "application/json",
         },
