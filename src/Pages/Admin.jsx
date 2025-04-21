@@ -26,7 +26,7 @@ const AdminPanel = () => {
 
   const fetchDJs = async () => {
     try {
-      const response = await axios.get("https://bakend-0ymv.onrender.com/dj");
+      const response = await axios.get("https://bakend-n1ab.onrender.com/dj");
       setDJs(response.data);
     } catch (error) {
       console.error("Error fetching DJs:", error);
@@ -39,7 +39,7 @@ const AdminPanel = () => {
 
   const handleAddDJ = async () => {
     try {
-      const response = await axios.post("https://bakend-0ymv.onrender.com/dj", newDJ);
+      const response = await axios.post("https://bakend-n1ab.onrender.com/dj", newDJ);
       setDJs([...djs, response.data]); // Update state
       setNewDJ({ name: "", genre: "", location: "", price: "", rating: "" }); // Clear form
     } catch (error) {
@@ -49,7 +49,7 @@ const AdminPanel = () => {
   
   const handleDeleteDJ = async (id) => {
     try {
-      await axios.delete(`https://bakend-0ymv.onrender.com/dj/${id}`);
+      await axios.delete(`https://bakend-n1ab.onrender.com/dj/${id}`);
       setDJs(djs.filter((dj) => dj._id !== id)); // Remove from UI
     } catch (error) {
       console.error("Error deleting DJ:", error);
@@ -112,7 +112,7 @@ const AdminPanel = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("https://bakend-0ymv.onrender.com/admin-logout", {}, { withCredentials: true });
+      await axios.post("https://bakend-n1ab.onrender.com/admin-logout", {}, { withCredentials: true });
       navigate("/admin-login"); // Redirect to login page after logout
     } catch (error) {
       console.error("Error logging out", error);
@@ -127,7 +127,7 @@ const AdminPanel = () => {
   
   const fetchEvents = async () => {
     try {
-      const response = await axios.get("https://bakend-0ymv.onrender.com/events");
+      const response = await axios.get("https://bakend-n1ab.onrender.com/events");
       setEvents(response.data);
     } catch (error) {
       console.error("Error fetching events:", error);
@@ -169,7 +169,7 @@ const AdminPanel = () => {
     console.log("Sending event payload:", eventPayload); // ✅ Debugging
   
     try {
-      const response = await axios.post("https://bakend-0ymv.onrender.com/events", eventPayload, {
+      const response = await axios.post("https://bakend-n1ab.onrender.com/events", eventPayload, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
           "Content-Type": "application/json",
@@ -197,7 +197,7 @@ const AdminPanel = () => {
   
     try {
       const response = await axios.delete(
-        `https://bakend-0ymv.onrender.com/events/${eventId}`,
+        `https://bakend-n1ab.onrender.com/events/${eventId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
