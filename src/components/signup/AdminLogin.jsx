@@ -27,9 +27,9 @@ export const AdminLogin = () => {
       // Send login request to the server
       const response = await axios.post("https://bakend-n1ab.onrender.com/admin-login", user, {
         headers: { "Content-Type": "application/json" },
-        withCredentials: true,
+        withCredentials: true, // This is required
       });
-  
+      
       // Check if the response contains a token
       if (response.data.token) {
         // Store the token in localStorage
