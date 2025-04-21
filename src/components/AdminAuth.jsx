@@ -17,9 +17,9 @@ const ProtectedRoute = ({ children }) => {
     // If the token exists, verify its validity by sending a request to the server
     axios.get("https://admin-0hmf.onrender.com/admin", {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem("adminToken")}`
-      }
-       // Include credentials (like cookies) if needed
+        Authorization: `Bearer ${token}`,
+      },
+      withCredentials: true, // Include credentials (like cookies) if needed
     })
       .then(() => setIsAuthenticated(true)) // Token is valid, the user is authenticated
       .catch(() => setIsAuthenticated(false)); // Token is invalid, set as unauthenticated
