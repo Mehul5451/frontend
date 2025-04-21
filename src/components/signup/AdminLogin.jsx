@@ -27,7 +27,7 @@ export const AdminLogin = () => {
       // Send login request to the server
       const response = await axios.post("https://admin-0hmf.onrender.com/admin-login", user, {
         headers: { "Content-Type": "application/json" },
-        withCredentials: true, // This is required
+       
       });
       
       // Check if the response contains a token
