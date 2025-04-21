@@ -15,7 +15,7 @@ const ProtectedRoute = ({ children }) => {
     }
 
     // If the token exists, verify its validity by sending a request to the server
-    axios.get("http://localhost:5000/admin", {
+    axios.get("https://bakend-0ymv.onrender.com/admin", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -10,7 +10,7 @@ const EventPage = () => {
   useEffect(() => {
     const fetchEventData = async () => {  
       try {
-        const response = await axios.get("http://localhost:5000/events"); // Ensure this route is correct
+        const response = await axios.get("https://bakend-0ymv.onrender.com/events"); // Ensure this route is correct
         if (response.data.length > 0) {
           setEvent(response.data[0]); // Assuming you're fetching a list of events, pick the first one
         } else {

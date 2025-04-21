@@ -19,7 +19,7 @@ import { Key } from "lucide-react";
   useEffect(() => {
     const fetchDJs = async () => {
       try {
-        const response = await axios.get("https://user-pel4.onrender.com/submit/dj");
+        const response = await axios.get("https://user-pel4.onrender.com/dj");
         setDJs(response.data);
       } catch (error) {
         console.error("Error fetching DJs:", error);
