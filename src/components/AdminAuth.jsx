@@ -36,20 +36,36 @@
 
 // export default ProtectedRoute;
 
+
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
 
 const ProtectedRoute = ({ children }) => {
-  const token = localStorage.getItem("adminToken");
+  const [isAuthenticated, setIsAuthenticated] = useState(null);
 
-axios.get("https://admin-0hmf.onrender.com/admin", {
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-});
+  useEffect(() => {
+    const token = localStorage.getItem("adminToken");
 
+    if (!token) {
+      setIsAuthenticated(false);
+      return;
+    }
+
+    axios.get("https://admin-0hmf.onrender.com/admin", {
+      headers: {
+        Authorization: `Bearer ${token}`, // Token in Authorization header
+      }
+    })
+      .then(() => setIsAuthenticated(true))
+      .catch(() => setIsAuthenticated(false));
+  }, []);
+
+  if (isAuthenticated === null) {
+    return <p>Loading...</p>; // Optional: replace with a spinner or skeleton loader
+  }
+
+  return isAuthenticated ? children : <Navigate to="/admin-login" />;
 };
 
 export default ProtectedRoute;
-
