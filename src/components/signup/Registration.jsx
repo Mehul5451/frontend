@@ -30,7 +30,7 @@ export const Register = () => {
       console.log(user);  // Check if user data is correct
     
       try {
-        const result = await axios.post("https://bakend-n1ab.onrender.com/submit", user, {
+        const result = await axios.post("https://backend-d15r.onrender.com/submit", user, {
           headers: {
             "Content-Type": "application/json",
           },
