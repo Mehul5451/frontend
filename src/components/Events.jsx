@@ -108,7 +108,7 @@ const EventPage = () => {
           {event.tickets.map((ticket, index) => (
             <div className="ticket" key={index}>
               <h3>{ticket.type}</h3>
-              <p>Price: ${ticket.price}</p>
+              <p>Price: ₹{ticket.price}</p>
               <button onClick={() => handleBooking(ticket)}>
                 {isBooking ? "Booking..." : "Book Now"}
               </button>
