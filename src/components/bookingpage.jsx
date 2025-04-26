@@ -19,7 +19,7 @@ import { Key } from "lucide-react";
   useEffect(() => {
     const fetchDJs = async () => {
       try {
-        const response = await axios.get("https://user-pel4.onrender.com/dj");
+        const response = await axios.get("https://backend-d15r.onrender.com/dj");
         setDJs(response.data);
       } catch (error) {
         console.error("Error fetching DJs:", error);
@@ -63,7 +63,7 @@ const handleConfirmBooking = async () => {
   };
 
   try {
-    const response = await axios.post("https://user-pel4.onrender.com/bookings", bookingData, {
+    const response = await axios.post("https://backend-d15r.onrender.com/bookings", bookingData, {
       headers: { Authorization: `Bearer ${token}` }, // ✅ Add JWT token
     });
 

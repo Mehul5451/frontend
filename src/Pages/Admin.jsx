@@ -26,7 +26,7 @@ const AdminPanel = () => {
 
   const fetchDJs = async () => {
     try {
-      const response = await axios.get("https://admin-0hmf.onrender.com/dj");
+      const response = await axios.get("https://adminside-8y84.onrender.com/dj");
       setDJs(response.data);
     } catch (error) {
       console.error("Error fetching DJs:", error);
@@ -39,7 +39,7 @@ const AdminPanel = () => {
 
   const handleAddDJ = async () => {
     try {
-      const response = await axios.post("https://admin-0hmf.onrender.com/dj", newDJ);
+      const response = await axios.post("https://adminside-8y84.onrender.com/dj", newDJ);
       setDJs([...djs, response.data]); // Update state
       setNewDJ({ name: "", genre: "", location: "", price: "", rating: "" }); // Clear form
     } catch (error) {
@@ -49,7 +49,7 @@ const AdminPanel = () => {
   
   const handleDeleteDJ = async (id) => {
     try {
-      await axios.delete(`https://admin-0hmf.onrender.com/dj/${id}`);
+      await axios.delete(`https://adminside-8y84.onrender.com/dj/${id}`);
       setDJs(djs.filter((dj) => dj._id !== id)); // Remove from UI
     } catch (error) {
       console.error("Error deleting DJ:", error);
@@ -63,7 +63,7 @@ const AdminPanel = () => {
   const fetchBookings = async () => {
     try {
       const token = localStorage.getItem("adminToken");
-      const response = await axios.get("https://user-pel4.onrender.com/bookings", {
+      const response = await axios.get("https://backend-d15r.onrender.com/bookings", {
         headers: { Authorization: `Bearer ${token}` },
  
       });
@@ -80,7 +80,7 @@ const AdminPanel = () => {
   const handleBookingAction = async (id, status) => {
     try {
       const token = localStorage.getItem("adminToken");
-      await axios.put(`https://user-pel4.onrender.com/bookings/${id}`,
+      await axios.put(`https://backend-d15r.onrender.com/bookings/${id}`,
         { status },
         { headers: { Authorization: `Bearer ${token}` },
       }
@@ -99,7 +99,7 @@ const AdminPanel = () => {
   const handleDeleteBooking = async (id) => {
     try {
       const token = localStorage.getItem("adminToken");
-      await axios.delete(`https://user-pel4.onrender.com/bookings/${id}`, {
+      await axios.delete(`https://backend-d15r.onrender.com/bookings/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
  },
       );
@@ -112,7 +112,7 @@ const AdminPanel = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("https://admin-0hmf.onrender.com/admin-logout", {}, { withCredentials: true });
+      await axios.post("https://adminside-8y84.onrender.com/admin-logout", {}, { withCredentials: true });
       navigate("/admin-login"); // Redirect to login page after logout
     } catch (error) {
       console.error("Error logging out", error);
@@ -127,7 +127,7 @@ const AdminPanel = () => {
   
   const fetchEvents = async () => {
     try {
-      const response = await axios.get("https://admin-0hmf.onrender.com/events");
+      const response = await axios.get("https://adminside-8y84.onrender.com/events");
       setEvents(response.data);
     } catch (error) {
       console.error("Error fetching events:", error);
@@ -169,7 +169,7 @@ const AdminPanel = () => {
     console.log("Sending event payload:", eventPayload); // ✅ Debugging
   
     try {
-      const response = await axios.post("https://admin-0hmf.onrender.com/events", eventPayload, {
+      const response = await axios.post("https://adminside-8y84.onrender.com/events", eventPayload, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
           "Content-Type": "application/json",
@@ -197,7 +197,7 @@ const AdminPanel = () => {
   
     try {
       const response = await axios.delete(
-        `https://admin-0hmf.onrender.com/events/${eventId}`,
+        `https://adminside-8y84.onrender.com/events/${eventId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -222,7 +222,7 @@ const AdminPanel = () => {
           return;
         }
   
-        const response = await axios.get("https://user-pel4.onrender.com/ticket-bookings", {
+        const response = await axios.get("https://backend-d15r.onrender.com/ticket-bookings", {
           headers: {
             Authorization: `Bearer ${token}`, // ✅ Include correct token in headers
           },
@@ -259,7 +259,7 @@ const AdminPanel = () => {
   
       // PUT request to update the status of the ticket booking
       const response = await axios.put(
-        `https://user-pel4.onrender.com/ticket-bookings/${id}`,
+        `https://backend-d15r.onrender.com/ticket-bookings/${id}`,
         { status }, // ✅ Ensure valid status
         {
           headers: {
@@ -305,7 +305,7 @@ const AdminPanel = () => {
       }
 
       // DELETE request to remove the ticket booking
-      await axios.delete(`https://user-pel4.onrender.com/ticket-bookings/${id}`, {
+      await axios.delete(`https://backend-d15r.onrender.com/ticket-bookings/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`, // Use token from localStorage
         },
