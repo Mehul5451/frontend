@@ -52,7 +52,7 @@ const ProtectedRoute = ({ children }) => {
       return;
     }
 
-    axios.get("https://admin-0hmf.onrender.com/admin", {
+    axios.get("https://adminside-8y84.onrender.com/admin", {
       headers: {
         Authorization: `Bearer ${token}`, // Token in Authorization header
       }
