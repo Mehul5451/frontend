@@ -20,7 +20,7 @@ const UserSide = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await axios.get("https://user-pel4.onrender.com/user-bookings", {
+      const response = await axios.get("https://backend-d15r.onrender.com/user-bookings", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -43,7 +43,7 @@ const UserSide = () => {
   
     try {
       console.log("Sending token:", token);  // Log the token being sent
-      const response = await axios.get("https://user-pel4.onrender.com/user-ticket-bookings", {
+      const response = await axios.get("https://backend-d15r.onrender.com/user-ticket-bookings", {
         headers: { Authorization: `Bearer ${token}` },
       });
   
@@ -72,7 +72,7 @@ const UserSide = () => {
     const token = localStorage.getItem("token");
 
     try {
-      await axios.delete(`https://user-pel4.onrender.com/bookings/${bookingId}`, {
+      await axios.delete(`https://backend-d15r.onrender.com/bookings/${bookingId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -89,7 +89,7 @@ const UserSide = () => {
     const token = localStorage.getItem("token");
 
     try {
-      await axios.delete(`https://user-pel4.onrender.com/book-tickets/${ticketId}`, {
+      await axios.delete(`https://backend-d15r.onrender.com/book-tickets/${ticketId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
