@@ -33,6 +33,7 @@ export const Register = () => {
         const result = await axios.post("https://backend-d15r.onrender.com/submit", user, {
           headers: {
             "Content-Type": "application/json",
+            
           },
         });
     
