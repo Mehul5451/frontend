@@ -40,7 +40,7 @@ const EventPage = () => {
 
     try {
       const response = await axios.post(
-        "https://user-pel4.onrender.com/book-tickets",
+        "https://adminside-8y84.onrender.com/book-tickets",
         {
           eventId: event._id,
           ticketType: ticket.ticketType, // Ensure the ticket object has a "type" field
